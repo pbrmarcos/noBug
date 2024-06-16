@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    max-width: 100%;
+    height: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+#cart-icon img {
+    width: 35px;
+    height: auto;
+}
+
+/* Product Section Styles */
+.product-box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    max-height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Modal Styles */
+.modal-body p {
+    text-align: center;
+}
+
+/* Notification Banner Styles */
+.notification-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1050;
+    display: none;
+}
+
+.notification-banner.show {
+    display: flex;
+}
+
+.notification-banner .close {
+    border: none;
+    background: none;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
