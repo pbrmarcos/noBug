@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoBug</title>
+    <title>NoBug - Produto</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,14 +20,11 @@
     <!-- Header Section -->
     <header class="container-fluid p-3 border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler d-block d-md-none" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-none d-md-flex">
+            <div class="d-flex">
                 <a href="#" class="mr-3">Home</a>
                 <a href="#">My Account</a>
             </div>
-            <div class="text-center flex-grow-1">
+            <div class="text-center">
                 <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
             </div>
             <div class="d-flex justify-content-end align-items-center">
@@ -38,57 +35,73 @@
         </div>
     </header>
     
-    <!-- Popup Menu -->
-    <div id="popupMenu" class="popup-menu">
-        <button class="close-btn">
-            <img src="assets/img/icon/close.png" alt="Close" class="img-fluid">
-        </button>
-        <div class="popup-content">
-            <a href="#">Home</a>
-            <a href="#">Minha Conta</a>
-            <a href="#">Trocas e Devoluções</a>
-            <div class="social-icons mt-5">
-                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
-                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
-                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
-            </div>
-        </div>
-    </div>
-        
-    <!-- Product Section -->
+
+    <!-- Product Detail Section -->
     <main class="container my-5">
         <div class="row">
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Branca</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Branca" data-price="79.90">Comprar</button>
+            <div class="col-md-6">
+                <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-fluid product-image mb-3">
+                <div class="d-flex flex-wrap">
+                    <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-thumbnail">
+                    <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-thumbnail">
+                    <img src="assets/img/products/product (1).png" alt="Camiseta Básica Branca" class="img-thumbnail">
+                </div>
             </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Preta</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Preta" data-price="79.90">Comprar</button>
-            </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Camiseta Básica Cinza</h2>
-                <p>R$79,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Camiseta Básica Cinza" data-price="79.90">Comprar</button>
+            <div class="col-md-6">
+                <h1 class="h2">Camiseta Básica Branca</h1>
+                <p class="h4 text-muted">R$ 79,90</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="mr-2">★★★★★</span>
+                    <span>(32 Avaliações)</span>
+                </div>
+                <p>em até 3x no cartão sem juros</p>
+                <div class="mb-3">
+                    <button class="btn btn-outline-secondary mr-1">P</button>
+                    <button class="btn btn-outline-secondary mr-1">M</button>
+                    <button class="btn btn-outline-secondary mr-1">G</button>
+                    <button class="btn btn-outline-secondary">XG</button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button">-</button>
+                    </div>
+                    <input type="text" class="form-control" value="1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Comprar</button>
+                <div class="mt-3">
+                    <input type="text" class="form-control mb-2" placeholder="CEP">
+                    <button class="btn btn-secondary">Calcular</button>
+                </div>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (4).png" alt="Calça Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Calça Jeans Baggy</h2>
-                <p>R$179,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Calça Jeans Baggy" data-price="179.90">Comprar</button>
+            <div class="col-md-6">
+                <h3 class="h5">Tabela de medidas</h3>
+                <ul>
+                    <li>P: Altura 70 x Largura 52</li>
+                    <li>M: Altura 72 x Largura 54</li>
+                    <li>G: Altura 74 x Largura 56</li>
+                    <li>XG: Altura 76 x Largura 58</li>
+                </ul>
             </div>
-            <div class="col-md-4 text-center product-box">
-                <img src="assets/img/products/product (3).png" alt="Bermuda Jeans Baggy" class="img-fluid product-image">
-                <h2 class="h5 mt-3">Bermuda Jeans Baggy</h2>
-                <p>R$149,90</p>
-                <button class="btn btn-comprar" data-toggle="modal" data-target="#sizeModal" data-name="Bermuda Jeans Baggy" data-price="149.90">Comprar</button>
+            <div class="col-md-6">
+                <h3 class="h5">Composição</h3>
+                <p>100% algodão</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4 text-center">
+                <img src="assets/img/products/product (5).png" alt="Camiseta Básica Cinza" class="img-fluid">
+                <p class="mt-2">Camiseta Básica Cinza</p>
+                <p>R$ 79,90</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/img/products/product (2).png" alt="Camiseta Básica Preta" class="img-fluid">
+                <p class="mt-2">Camiseta Básica Preta</p>
+                <p>R$ 79,90</p>
             </div>
         </div>
     </main>
@@ -162,6 +175,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/adicionarProdutoCarrinho.js"></script>
-    <script src="assets/js/abrirFecharMenuHamburger.js"></script>
 </body>
 </html>

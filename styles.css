@@ -2,16 +2,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
-    position: relative;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 1.25rem;
+h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -34,17 +28,127 @@ header .logo {
 header a {
     text-decoration: none;
     color: #333;
+    font-weight: 200;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+
+header .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+header .justify-content-between {
+    justify-content: space-between;
+}
+
+header .justify-content-end {
+    justify-content: flex-end;
+}
+
+header .align-items-center {
+    align-items: center;
+}
+
+header .navbar-toggler {
+    border: none;
+    background: none;
+}
+
+header .navbar-toggler-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url("assets/img/icon/menu.png"); /* Certifique-se de que o ícone do menu esteja no caminho correto */
+    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    header .text-center {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    header .navbar-toggler {
+        display: block;
+        color: #000;
+    }
+
+    header .d-none {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    header .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Popup Menu Styles */
+.popup-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+    transition: left 0.3s ease;
+}
+
+.popup-menu.open {
+    left: 0;
+}
+
+.popup-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-menu .close-btn img {
+    width: 35px; /* Ajuste o tamanho conforme necessário */
+    height: 35px;
+}
+
+.popup-menu .popup-content {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-menu .popup-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
     font-weight: 400;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
 }
 
-header a:hover {
-    color: #007bff;
+/* Botão Comprar Styles */
+.btn-comprar {
+    background-color: #808080; /* Cor do fundo */
+    color: #000; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 50px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-weight: bold; /* Texto em negrito */
+    font-family: 'Poppins', sans-serif; /* Fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
-#cart-icon img {
-    width: 35px;
-    height: auto;
+.btn-comprar:hover {
+    background-color: #666666; /* Cor de fundo ao passar o mouse */
 }
+
 
 /* Product Section Styles */
 .product-box {
