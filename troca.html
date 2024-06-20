@@ -1,0 +1,149 @@
+    <!-- Essa é uma página de exemplo, ela contém cabeçalho e rodapé apenas -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NoBug - Produto</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Notification Banner -->
+        <div id="notificationBanner" class="notification-banner">
+            <span id="notificationMessage" class="text-success"></span>
+            <button type="button" class="close" aria-label="Close" id="closeNotification">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    
+        <!-- Header Section -->
+        <header class="container-fluid p-3 border-bottom">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <a href="#" class="mr-3">Home</a>
+                    <a href="#">My Account</a>
+                </div>
+                <div class="text-center">
+                    <img src="assets/img/logo/logo.png" alt="NoBug Logo" class="img-fluid logo">
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                    <a href="#" id="cart-icon" data-toggle="modal" data-target="#cartModal">
+                        <img src="assets/img/icon/carrinho.png" width="35" alt="Cart" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Cart Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Seu carrinho está vazio.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-claro">Limpar Carrinho</button>
+                        <button type="button" class="btn btn-comprar">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+         <!-- Size Selection Modal -->
+         <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="sizeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sizeModalLabel">Selecione o Tamanho</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sizeForm">
+                            <div class="form-group">
+                                <label for="sizeSelect">Tamanho</label>
+                                <select class="form-control" id="sizeSelect">
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">GG</option>
+                                </select>
+                            </div>
+                            <input type="hidden" id="productName">
+                            <input type="hidden" id="productPrice">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-claro">Cancelar</button>
+                        <button type="button" class="btn btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Aqui entra o conteúdo da página -->
+<!-- Main Content -->
+<main class="container mt-5">
+    <h1 class="text-center">Trocas e devoluções</h1>
+
+    <section class="mt-5">
+        <h2>Política de Trocas e Devoluções:</h2>
+
+        <div class="mt-4">
+            <h5>Devoluções:</h5>
+            <p>
+                Deve ser solicitada a devolução do produto em até 15 dias após o recebimento do produto. Arcamos com os custos de envio, e depois de avaliar as condições do produto, realizaremos a devolução do dinheiro.
+            </p>
+        </div>
+
+        <div class="mt-4">
+            <h5>Trocas:</h5>
+            <p>
+                Também dentro do prazo de 15 dias após o recebimento do produto, o cliente deverá enviar o produto seguindo as nossas normas de troca e devolução, para que a troca seja efetuada. A troca fica sujeita à disponibilidade do produto.
+            </p>
+        </div>
+
+        <div class="mt-4">
+            <h5>Condições de Troca e Devolução:</h5>
+            <p>
+                Para que a troca ou devolução seja concluída, o produto deve seguir as seguintes exigências:
+            </p>
+            <ul>
+                <li>O produto não poderá apresentar nenhum indício de uso;</li>
+                <li>Preservar a embalagem interna e etiquetas originais do produto;</li>
+                <li>Respeitar o prazo de 15 dias para solicitar a devolução ou troca.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+    <!-- Espaço vazio no final -->
+    <div class="spacer"></div>
+    
+        <!-- Footer Section -->
+        <footer class="text-center py-5">
+            <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
+            <div class="social-icons mb-3">
+                <a href="#"><img src="assets/img/icon/whats.png" width="30" alt="WhatsApp"></a>
+                <a href="#"><img src="assets/img/icon/mail.png" width="30" alt="Email"></a>
+                <a href="#"><img src="assets/img/icon/instagram.png" width="30" alt="Instagram"></a>
+            </div>
+            <p>Todos os direitos reservados à NoBug.</p>
+        </footer>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="assets/js/adicionarProdutoCarrinho.js"></script>
+    </body>
+    </html>
+    

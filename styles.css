@@ -5,15 +5,73 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+//* Tipografia Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4 {
+    margin-bottom: 0.5em;
     font-weight: 700;
 }
 
-p {
-    font-size: 1rem;
-    font-weight: 400;
+h1 {
+    font-size: 2.5em;
+    color: #000000;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
+h2 {
+    font-size: 2em;
+    color: #000000;
+}
+
+h3 {
+    font-size: 1.75em;
+    color: #000000;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+/* Listas */
+ul {
+    margin-bottom: 1.2em;
+    padding-left: 1.5em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+/* Links */
+a {
+    color: #383838;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#000;
+    text-decoration: underline;
+}
 /* Header Styles */
 header {
     background-color: #ffffff;
@@ -28,7 +86,7 @@ header .logo {
 header a {
     text-decoration: none;
     color: #333;
-    font-weight: 200;
+    font-weight: 500;
     font-style: italic;
     font-family: 'Poppins', sans-serif;
 }
@@ -62,6 +120,7 @@ header .navbar-toggler-icon {
     background-size: cover;
 }
 
+/* Mobile Header Styles */
 @media (max-width: 767px) {
     header .text-center {
         flex-grow: 1;
@@ -78,6 +137,7 @@ header .navbar-toggler-icon {
     }
 }
 
+/* Desktop Header Styles */
 @media (min-width: 768px) {
     header .navbar-toggler {
         display: none;
@@ -132,7 +192,7 @@ header .navbar-toggler-icon {
     margin-bottom: 15px;
 }
 
-/* Botão Comprar Styles */
+/* Botão Comprar (Escuro) Styles */
 .btn-comprar {
     background-color: #808080; /* Cor do fundo */
     color: #000; /* Cor do texto */
@@ -149,6 +209,39 @@ header .navbar-toggler-icon {
     background-color: #666666; /* Cor de fundo ao passar o mouse */
 }
 
+/* Botão Claro Styles */
+.btn-claro {
+    background-color: #f5f5f5; /* Cor do fundo */
+    color: #1c1c1c; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 50px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-weight: bold; /* Texto em negrito */
+    font-family: 'Poppins', sans-serif; /* Fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.btn-claro:hover {
+    background-color: #e4e4e4; /* Cor de fundo ao passar o mouse */
+}
+
+/* Botão Calcular Styles */
+.btn-calcular {
+    background-color: #808080; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 50px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-weight: bold; /* Texto em negrito */
+    font-family: 'Poppins', sans-serif; /* Fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.btn-calcular:hover {
+    background-color: #666666; /* Cor de fundo ao passar o mouse */
+}
 
 /* Product Section Styles */
 .product-box {
@@ -164,9 +257,23 @@ header .navbar-toggler-icon {
 }
 
 .product-image {
-    max-height: 300px;
-    object-fit: cover;
+    max-width: 100%; /* Ajuste de largura máxima */
+    max-height: 400px; /* Ajuste de altura máxima */
+    object-fit: contain;
+    margin: auto; /* Centralização */
     transition: transform 0.3s ease;
+}
+
+/* Quantity Box Styles */
+.quantity-box {
+    width: 100%;
+    max-width: 200px; /* Ajuste de largura máxima */
+}
+
+.quantity-btn {
+    width: 50px; /* Ajuste de largura */
+    height: 50px; /* Ajuste de altura */
+    border-radius: 25px; /* Bordas arredondadas */
 }
 
 /* Footer Styles */
@@ -216,4 +323,27 @@ footer .social-icons img {
     font-size: 20px;
     line-height: 20px;
     cursor: pointer;
+}
+
+/* Espaço vazio no final */
+.spacer {
+    height: 100px;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-container {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Email Verification Box Styles */
+.email-verification-box {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.email-verification-box .email-icon {
+    width: 50px;
+    height: auto;
 }
